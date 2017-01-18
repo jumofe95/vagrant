@@ -70,5 +70,12 @@ Vagrant.configure("2") do |config|
 	"sudo touch /vagrant/compartida/index.html"
 	"sudo rm /var/www/index.html"
 	"sudo ln -s /vagrant/compartida/* /var/www/"
+	"sudo cp -r /vagrant/compartida/sitio1/ /var/www/"
+	"sudo cp -r /vagrant/compartida/sitio2/ /var/www/"
+	"sudo apt-get -y install git"
+	"sudo git clone https://github.com/jumofe95/vagrant-conf.git /etc/apache2/sites-available/"
+	"a2ensite sitio1.com.conf && a2ensite sitio2.com.conf && service apache2 reload"
+
   # SHELL
 end
+	
